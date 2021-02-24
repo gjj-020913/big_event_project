@@ -14,7 +14,7 @@ $.ajaxPrefilter(function (option) {
     }
 
     option.complete = function (res) {
-        console.log(res);
+        // console.log(res);
         const { message, status } = res.responseJSON;
         if (message === "身份认证失败！" && status === 1) {
             // 1. 强制清空 token
